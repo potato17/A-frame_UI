@@ -16,12 +16,41 @@
     </head>
     <body>
         <a-scene>
-            <a-entity laser-controls="hand: right"></a-entity>
-            <a-gradient-sky material="shader: gradient; topColor: 140 40 30; bottomColor: 50 150 100;"></a-gradient-sky>
-            <a-entity>
-                <a-camera look-controls-enabled wasd-controls-enabled mouse-cursor></a-camera>
+            
+            
+            <!--- IMAGES RETREIVE -->
+            <a-assets>
+                <img id="basic" src="./Images/basic.png">
+                <img id="map" src="./Images/Map.png">
+            </a-assets>
+            <!-- END IMAGE RETREIVE -->
 
-            <a-rounded position=""></a-rounded>
+            <a-entity laser-controls="hand: right"></a-entity>
+            <a-camera look-controls-enabled wasd-controls-enabled mouse-cursor></a-camera>
+
+            <!--START ENVIRONMENT-->
+            <a-gradient-sky material="shader: gradient; topColor: 140 40 30; bottomColor: 50 150 100;"></a-gradient-sky><a-entity>
+            <!--END ENVIRONMENT-->
+
+            <a-rounded position="4.5 0 -4.5" width="3" height="3.25"  color="#c0c0c0" rotation ="0 -40 0">
+                <a-text position="1  0.3 0 " value="Pathway" color="black" fontfamily="Ariel"></a-text>
+            </a-rounded>
+            <a-rounded position = "0 0 -4.5" width ="3" height ="3.25" color ="#c0c0c0" rotation ="0 0 0" >
+                <a-text position="1 0.3 0 " value ="Moringa" color ="black" fontfamily="Ariel"></a-text>
+            </a-rounded>
+            <a-rounded position="-4 0 -4.5" width="3" height="3.25" color="#c0c0c0" rotation ="0 0 0">
+                <a-text position="0.8 0.3 0 " value="KIT Campus" color="black" fontfamily="Ariel"></a-text>
+            </a-rounded>
+            <a-rounded position="-7.8 0 -2.7" width="3" height="3.25" color="#c0c0c0x" rotation ="0 35 0">
+                <a-text position="1.2 0.3 0 " value="PVK" color="black" fontfamily="Ariel"></a-text>
+            </a-rounded>
+            
+            <div class="img">
+            <a-image position="-3.5 0 -5.5" src="#basic"  radius="5.7" theta-length="72" rotation="0 100 0"
+                scale="0.8 0.8 0.8">
+            </a-image>
+            <div>
+
             </a-entity>
         </a-scene>
     </body>
